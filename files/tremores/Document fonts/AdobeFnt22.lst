@@ -1,0 +1,53 @@
+%!Adobe-FontList 1.22
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:FilosofiaOT-Bold
+FamilyName:Filosofia OT
+StyleName:Bold
+FullName:Filosofia OT Bold
+MenuName:Filosofia OT
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\leo\Desktop\miradapoetica\files\tremores\Document fonts\FilosofiaOT-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:50328
+FileModTime:1592606572
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Filosofia OT Bold
+NameArray:0,Win,1,Filosofia OT
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:FilosofiaOT
+FamilyName:Filosofia OT
+StyleName:Regular
+FullName:Filosofia OT
+MenuName:Filosofia OT
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\leo\Desktop\miradapoetica\files\tremores\Document fonts\FilosofiaOT-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:100104
+FileModTime:1592606572
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Filosofia OT
+NameArray:0,Win,1,Filosofia OT
+%EndFont
+

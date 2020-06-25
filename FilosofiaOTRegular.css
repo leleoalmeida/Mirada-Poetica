@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'FilosofiaOTRegular';
+    src: url('fonts/FilosofiaOTRegular.eot');
+    src: url('fonts/FilosofiaOTRegular.eot') format('embedded-opentype'),
+         url('fonts/FilosofiaOTRegular.woff2') format('woff2'),
+         url('fonts/FilosofiaOTRegular.woff') format('woff'),
+         url('fonts/FilosofiaOTRegular.ttf') format('truetype'),
+         url('fonts/FilosofiaOTRegular.svg#FilosofiaOTRegular') format('svg');
+}
