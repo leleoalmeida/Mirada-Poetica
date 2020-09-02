@@ -1,5 +1,7 @@
 @font-face {
     font-family: 'FilosofiaOT';
+    font-style: normal;
+    font-weight: normal;
     src: url('../fonts/FilosofiaOTRegular.eot');
     src: url('../fonts/FilosofiaOTRegular.eot') format('embedded-opentype'), url('../fonts/FilosofiaOTRegular.woff2') format('woff2'), url('../fonts/FilosofiaOTRegular.woff') format('woff'), url('../fonts/FilosofiaOTRegular.ttf') format('truetype'), url('../fonts/FilosofiaOTRegular.svg#FilosofiaOTRegular') format('svg');
 }
@@ -7,6 +9,7 @@
 @font-face {
     font-family: 'FilosofiaOT';
     font-style: bold;
+    font-weight: bold;
     src: url('../fonts/FilosofiaOTBold.eot');
     src: url('../fonts/FilosofiaOTBold.eot') format('embedded-opentype'), url('../fonts/FilosofiaOTBold.woff2') format('woff2'), url('../fonts/FilosofiaOTBold.woff') format('woff'), url('../fonts/FilosofiaOTBold.ttf') format('truetype'), url('../fonts/FilosofiaOTBold.svg#FilosofiaOTBold') format('svg');
 }
@@ -27,22 +30,105 @@ h1 {
     margin: 0;
 }
 
+#loading {
+    display: block;
+}
+
+nav {
+    position: absolute;
+    z-index: 99;
+    padding: 0 30px;
+    font-family: 'FilosofiaOT';
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+#nav-tremores {
+    color: black;
+    height: auto;
+    display: grid;
+}
+
+#nav-nomades {
+    color: white;
+    height: auto;
+    background-color: #131726;
+}
+
+#mirada-hatch {
+    float: left;
+    background-color: #e6007e;
+}
+
+#mirada-hatch a {
+    color: white;
+}
+
+.menubutton {
+    display: none;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+nav a {
+    color: black;
+}
+
+#nav-nomades a {
+    color: white;
+}
+
+nav ul {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: right;
+}
+
 .container {
     max-width: 720px;
     margin: 0 auto;
+    display: none;
 }
 
 #headertrovao {
-    width: 100%;
-    height: auto;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
 }
 
 section {
     margin-bottom: 200px;
 }
 
+.socials {
+    margin-top: 70px;
+}
+
+.socials h4 {
+    margin-bottom: 10px;
+}
+
+.socials img {
+    height: 30px;
+}
+
+.socials a {
+    margin-right: 15px;
+}
+
 #inteiro {
-    margin-top: -200px;
+    margin-top: 550px;
 }
 
 .elemento {
@@ -52,28 +138,48 @@ section {
 
 #linhas {
     width: 57%;
-    top: 80%;
+    top: 1050px;
     right: 10%;
 }
 
 #saida {
     width: 57%;
-    top: 2180px;
+    top: 2600px;
     left: 300px;
 }
 
-h2 {
+#mancha1,
+#mancha2,
+#mancha3,
+#furac {
+    width: 57%;
+}
+
+#mancha1 {
+    top: 4000px;
+    left: 300px;
+}
+
+h2,
+h4 {
     font-family: 'FilosofiaOT';
-    font-weight: normal;
+    font-weight: bold;
     font-style: bold;
+}
+
+h2 {
     font-size: 36px;
 }
 
 .poema p,
 h3 {
-    font-family: 'FilosofiaOTRegular';
+    font-family: 'FilosofiaOT';
     font-weight: normal;
     font-style: normal;
+}
+
+h4 {
+    font-size: 1.3rem;
 }
 
 h3 {
@@ -103,6 +209,8 @@ h3 {
 }
 
 #titlenomades {
+    font-family: 'FilosofiaOT';
+    font-weight: bold;
     font-size: 10rem;
     color: white;
     text-align: center;
@@ -139,4 +247,44 @@ h3 {
     width: 57%;
     top: 432%;
     right: 23%;
+}
+
+
+/* RESPONSIVE STUFF */
+
+@media only screen and (max-device-width: 812px) {
+    .container {
+        padding: 0 15px;
+    }
+    .elemento {
+        display: none;
+    }
+    nav {
+        display: none;
+        height: 100vh;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    #nav-nomades,
+    #nav-tremores {
+        height: 100vh;
+    }
+    #mirada-hatch,
+    nav li {
+        float: none;
+    }
+    .menubutton {
+        display: block;
+        padding: 10px;
+        height: 24px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    #atordoamento p {
+        font-size: 1.35rem !important;
+    }
+    #inteiro {
+        margin-top: 0;
+    }
 }

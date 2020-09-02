@@ -22,9 +22,44 @@
     <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
-
+<body onload="loadingScreen()">
+    <div id="loading">
+        <p>loading</p>
+    </div>
     <!-- Add your site or application content here -->
+
+    <img class="menubutton" onclick="openMenu()" src="./img/icons/menu.svg" alt="botão menu">
+
+    <nav id="nav-nomades">
+
+        <ul>
+            <li id="mirada-hatch"><a href="http://miradapoetica.com.br/">
+                mirada poética
+            </a></li>
+
+
+
+
+            <li>
+                <a href="https://www.quixote-do.com.br/produto/tremores-nomades-e-fortes/">
+                compre o livro
+                </a>
+            </li>
+
+            <li>
+                <a href="./nomadesefortes.html">
+                    <b><u>nômades e fortes</u></b>
+                </a>
+            </li>
+            <li>
+                <a href="./tremores.html">
+                    tremores
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
     <img id="headernomades" src="img/headernomades.png" alt="">
 
     <div class="container">
