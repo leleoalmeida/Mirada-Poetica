@@ -24,58 +24,185 @@
 body {
     background-color: #ffffeb;
     overflow-x: hidden;
+    font-family: 'FilosofiaOT';
+    hyphens: auto;
 }
 
 h1 {
     margin: 0;
 }
 
-#loading {
+#texto-sobre {
+    font-size: 1.5rem;
     display: block;
+    height: auto;
 }
 
-nav {
+.grande-letra {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 0;
+    font-style: italic;
+}
+
+.grande-letra::first-letter {
+    font-size: 3rem;
+}
+
+.grande-letra+p {
+    text-align: right;
+    margin-top: 0;
+}
+
+.estamos-sobre {
+    width: auto;
+    display: block;
+    padding: 40px 20px;
+    color: black;
+    position: relative;
+    margin-left: 30px;
+}
+
+.estamos-sobre>div {
     position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+}
+
+.estamos-sobre img {
+    position: absolute;
+    height: 150%;
+    width: auto;
+    transform: rotate(180deg);
+}
+
+.atordoamento-sobre {
+    width: auto;
+    display: block;
+    /* background-color: #e6007e66; */
+    padding: 40px 20px;
+    color: black;
+    position: relative;
+    margin: 30px 30px 0 0;
+}
+
+.border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    top: -10px;
+    left: -10px;
+    z-index: 10;
+}
+
+#estamos-sobre>p {
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+#objeto1 {
+    display: inline-block;
+    flex: 33%;
+    margin: 0 20px 0 -200px;
+}
+
+#objeto1>img {
+    width: 100%;
+}
+
+#objeto1+div {
+    flex: 66%;
+    display: inline-block;
+}
+
+#loading {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffeb;
+}
+
+#loading-container {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#loading-container img {
+    height: 200px;
+    animation: rotate 24s linear;
+}
+
+#loading-container p {
+    margin: 0;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-360deg);
+    }
+}
+
+nav,
+.mobile-nav {
+    display: flex;
+    justify-content: space-between;
     z-index: 99;
-    padding: 0 30px;
     font-family: 'FilosofiaOT';
-    font-weight: normal;
     font-size: 1.5rem;
 }
 
-#nav-tremores {
+nav {
+    padding: 0 30px;
+}
+
+#nav-tremores ul a {
     color: black;
-    height: auto;
-    display: grid;
 }
 
 #nav-nomades {
     color: white;
-    height: auto;
-    background-color: #131726;
 }
 
-#mirada-hatch {
-    float: left;
-    background-color: #e6007e;
-}
-
-#mirada-hatch a {
-    color: white;
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    bottom: 0;
+    position: fixed;
 }
 
 .menubutton {
     display: none;
 }
 
-nav a {
-    display: block;
+#mirada-hatch {
     text-decoration: none;
     padding: 14px 16px;
+    background-color: #e6007e;
+    color: white;
 }
 
-nav a {
-    color: black;
+ul {
+    list-style-type: none;
+    /* padding: 0; */
+}
+
+nav a,
+.mobile-nav a {
+    text-decoration: none;
 }
 
 #nav-nomades a {
@@ -83,19 +210,70 @@ nav a {
 }
 
 nav ul {
-    display: inline;
-    list-style-type: none;
+    display: flex;
+    gap: 60px;
+    align-items: center;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
-nav li {
-    float: right;
+#experimente {
+    display: none;
 }
+
+#header-sobre {
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#header-sobre+h1 {
+    display: none;
+}
+
+#exp-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-image: url("../img/linhas.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#experimente-tremores,
+#experimente-nomades {
+    display: inline-block;
+    width: 350px;
+    margin: auto;
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    border: 3px solid pink;
+}
+
+
+/* #experimente-tremores {
+    background-image: url("../img/linhas.png");
+}
+
+#experimente-nomades {
+    background-image: url("../img/furacao.png");
+} */
 
 .container {
     max-width: 720px;
     margin: 0 auto;
+    margin-bottom: 100px;
     display: none;
 }
 
@@ -249,6 +427,26 @@ h3 {
     right: 23%;
 }
 
+#compre {
+    text-align: center;
+}
+
+#compre a {
+    display: block;
+    width: 300px;
+    height: 4rem;
+    line-height: 4rem;
+    background-color: #e6007e;
+    margin: 30px auto 0 auto;
+    border: none;
+    color: white;
+    text-decoration: none;
+}
+
+.margin-100 {
+    margin-top: 100px;
+}
+
 
 /* RESPONSIVE STUFF */
 
@@ -261,17 +459,27 @@ h3 {
     }
     nav {
         display: none;
-        height: 100vh;
+    }
+    .mobile-nav {
+        display: none;
+        position: fixed;
+        top: 0;
         width: 100%;
-        box-sizing: border-box;
     }
-    #nav-nomades,
-    #nav-tremores {
-        height: 100vh;
+    .mobile-nav li {
+        padding: 15px 0;
+        font-size: 2rem;
     }
-    #mirada-hatch,
-    nav li {
-        float: none;
+    #nav-nomades {
+        background-color: #131726;
+    }
+    #mirada-hatch {
+        text-decoration: none;
+        margin: 0 60px;
+        background-color: #e6007e;
+        color: white;
+        text-align: center;
+        bottom: 0;
     }
     .menubutton {
         display: block;
@@ -280,11 +488,43 @@ h3 {
         position: absolute;
         right: 20px;
         top: 20px;
+        z-index: 100;
     }
-    #atordoamento p {
+    /* #atordoamento p {
         font-size: 1.35rem !important;
+    } */
+    #headertrovao {
+        width: 100vw;
+        height: auto;
+        position: absolute;
+        /* right: 50%; */
+        top: 0;
+        z-index: -1;
     }
     #inteiro {
         margin-top: 0;
+    }
+    #objeto1 {
+        flex: 100%;
+        margin: 0 0 20px 0;
+    }
+    #objeto1+div {
+        flex: 100%;
+    }
+    #header-sobre {
+        display: none;
+    }
+    .grande-letra {
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+    #header-sobre+h1 {
+        display: table-cell;
+        height: 200px;
+        vertical-align: middle;
+        background-color: #e6007e;
+        color: white;
+        font-size: 3rem;
+        text-align: center;
     }
 }

@@ -4,10 +4,27 @@ function loadingScreen() {
 }
 
 function openMenu() {
-    let menu = document.querySelector("nav");
-    if (menu.style.display == 'inline-block') {
+    let menu = document.querySelector(".mobile-nav");
+    let icon = document.querySelector(".menubutton");
+
+    if (menu.style.display == 'flex') {
         menu.style.display = 'none';
+        icon.src = './img/icons/menu.svg';
+        document.body.style.position = '';
     } else {
-        menu.style.display = 'inline-block';
+        menu.style.display = 'flex';
+        icon.src = './img/icons/close.svg';
+        document.body.style.position = 'fixed';
+
     };
 }
+
+function lineUnbreaker() {
+    let text = document.querySelector("#atordoamento").getElementsByTagName("p");
+
+    // text.innerHTML = .text.innerHTML.replace(/(?:\r\n|\r|\n)/g, '<br>');
+
+    console.log(text[8].innerHTML)
+}
+
+lineUnbreaker();
