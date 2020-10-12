@@ -21,11 +21,16 @@
     src: url('../fonts/FilosofiaOTItalic.eot') format('embedded-opentype'), url('../fonts/FilosofiaOTItalic.woff2') format('woff2'), url('../fonts/FilosofiaOTItalic.woff') format('woff'), url('../fonts/FilosofiaOTItalic.ttf') format('truetype'), url('../fonts/FilosofiaOTItalic.svg#FilosofiaOTItalic') format('svg');
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #ffffeb;
-    overflow-x: hidden;
     font-family: 'FilosofiaOT';
     hyphens: auto;
+    position: relative;
 }
 
 h1 {
@@ -239,7 +244,7 @@ nav ul {
     flex-flow: row wrap;
     justify-content: space-around;
     background-image: url("../img/linhas.png");
-    background-repeat: no-repeat;
+    background- background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -328,14 +333,48 @@ section {
 
 #mancha1,
 #mancha2,
-#mancha3,
-#furac {
-    width: 57%;
+#mancha3 {
+    width: 70%;
+}
+
+#furac1 {
+    width: 70%;
+    top: 4000px;
+    left: 250px;
+    opacity: .7;
+    z-index: -1;
+}
+
+#furac2 {
+    width: 50%;
+    top: 4160px;
+    left: 580px;
+    transform: rotate(10deg);
+    opacity: .6;
+    z-index: -2;
+}
+
+#furac3 {
+    width: 40%;
+    top: 4250px;
+    left: 780px;
+    transform: rotate(25deg);
+    /* opacity: .7; */
+    z-index: -3;
 }
 
 #mancha1 {
-    top: 4000px;
-    left: 300px;
+    top: 6710px;
+    left: 320px;
+}
+
+#mancha2 {
+    top: 7710px;
+}
+
+#mancha3 {
+    top: 8480px;
+    left: 500px;
 }
 
 h2,
@@ -362,7 +401,7 @@ h4 {
 
 h3 {
     font-size: 22px;
-    margin: -30px 0 0 0;
+    /* margin: -30px 0 0 0; */
     text-indent: 150px;
 }
 
@@ -453,9 +492,10 @@ h3 {
 @media only screen and (max-device-width: 812px) {
     .container {
         padding: 0 15px;
+        margin-top: 200px;
     }
-    .elemento {
-        display: none;
+    section img {
+        overflow: hidden;
     }
     nav {
         display: none;
@@ -500,6 +540,11 @@ h3 {
         /* right: 50%; */
         top: 0;
         z-index: -1;
+    }
+    #linhas {
+        width: 200%;
+        top: 555px;
+        right: -400px;
     }
     #inteiro {
         margin-top: 0;
